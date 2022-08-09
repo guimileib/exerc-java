@@ -1,0 +1,87 @@
+#include <stdio.h>
+
+
+int soma(int *v1 , int *v2){
+    int resultado;
+    resultado= *v1 + *v2;
+    return (resultado);
+
+}
+
+int sub(int *v1 , int *v2){
+    int resultado= *v1 - *v2;
+    return (resultado);
+
+}
+
+int mult(int *v1 , int *v2){
+    int resultado=*v1 * *v2;
+    return (resultado);
+
+}
+
+int div(int *v1, int *v2){
+    int resultado= *v1 / *v2;
+    return (resultado);
+
+}
+
+void troca_valores(int *v1, int *v2){
+    int auxiliar;
+    auxiliar = *v1;
+    *v1 = *v2;
+    *v2 = auxiliar;
+
+}
+
+
+
+main ()
+{
+    int x1,x2,opcao,resultado;
+
+    printf("Digite dois valores para assumir x1 e x2:\n");
+    scanf("%d %d", &x1,&x2);
+
+    do{
+        printf("Digite [1] para somar dois números:\n");
+        printf("Digite [2] para subtrair dois números:\n");
+        printf("Digite [3] para multiplicar dois números:\n");
+        printf("Digite [4] para dividir dois números:\n");
+        printf("Digite [5] para trocar os valores\n");
+        scanf("%d",&opcao);
+
+    switch(opcao){
+    case 1:
+    resultado = soma(&x1,&x2);
+    printf("O resultado é %d\n", resultado);
+    break;
+
+    case 2:
+    resultado = sub(&x1,&x2);
+    printf("O resultado é %d\n", resultado);
+    break;
+
+    case 3:
+    resultado = mult(&x1,&x2);
+    printf("O resultado é %d\n", resultado);
+    break;
+
+    case 4:
+    resultado = div(&x1,&x2);
+    printf("O resultado é %d\n", resultado);
+    break;
+
+    case 5:
+    printf("Valores quando digitado: %d e %d \n", x1,x2);
+    troca_valores(&x1,&x2);
+    printf("Valores digitados após a troca de seus valores %d e %d\n", x1, x2);
+    break;
+
+    default:
+    printf("VOCÊ ESTÁ SAINDO DO PROGRAMA....");
+    break;
+    }
+
+    }while(opcao<6 && opcao>0);
+}
