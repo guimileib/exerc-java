@@ -1,3 +1,15 @@
+/*Usando função, faça um programa que calcule a
+quantidade de latas de tinta necessárias e o custo para pintartanques cilíndricos de combustível, onde são fornecidos a
+altura e o raio desse cilindro.
+– A lata de tinta custa R$20,00 e cada lata contém 5 litros, cada litro
+de tinta pinta 3 metros quadrados.
+– Área do cilindro: 2 x a área da base + circunferência da base x a
+altura
+– O raio e altura são dados de entrada.
+*/
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
